@@ -6,7 +6,7 @@ import { cleanupDevServer } from "./dev-server.js";
 
 export async function startMcpServer(): Promise<void> {
   const server = new McpServer({
-    name: "peekaboo",
+    name: "agent-peekaboo",
     version: "0.1.0",
   });
 

@@ -1,5 +1,5 @@
 {
-  "name": "peekaboo",
+  "name": "agent-peekaboo",
   "version": "0.1.0",
   "description": "MCP screenshot server for AI agent workflows",
   "type": "module",
@@ -14,6 +14,11 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
+    "release:patch": "./scripts/release.sh patch",
+    "release:minor": "./scripts/release.sh minor",
+    "release:major": "./scripts/release.sh major",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "postinstall": "npx playwright install chromium"
   },
   "dependencies": {
@@ -23,7 +28,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.17.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "vitest": "^4.1.2"
   },
   "engines": {
     "node": ">=18"
